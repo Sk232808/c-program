@@ -2,6 +2,10 @@
 
 A simple web application written in the C programming language.
 
+## Live Demo
+
+[Open the Marks Result Checker](https://beamish-cendol-3ade7d.netlify.app)
+
 Enter marks for five subjects, and the app calculates the average percentage:
 
 - `33%` or more: **Congratulations! You passed.**
