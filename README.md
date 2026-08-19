@@ -55,10 +55,32 @@ The app shows an error when:
 - A mark is less than `0`.
 - A mark is greater than `100`.
 
+## Methodology
+
+1. The web page displays five input boxes for subject marks from `0` to `100`.
+2. The browser sends the submitted values to the C server using an HTTP `POST` request.
+3. The C program checks that all five values are present, numeric, and within the valid range.
+4. The program adds the five marks and divides the total by five. Because each subject is out of `100`, this average is the overall percentage.
+5. The program compares the percentage with `33`. A percentage of exactly `33%` is a pass.
+6. The C server sends an HTML response showing the average and the pass or fail message.
+
+```text
+if percentage >= 33
+	show "Congratulations! You passed."
+else
+	show "You failed."
+```
+
+## Technologies Used
+
+- C programming language
+- Windows Winsock for networking
+- HTML and CSS embedded in the C source
+- HTTP `GET` and `POST` requests
+
 ## Files
 
 - `shivam.c` - C web server and marks calculation logic.
-- `METHODOLOGY.md` - Simple explanation of how the application works.
 
 ## License
 
